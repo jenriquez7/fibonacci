@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${POSTGRES_URL}
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+  application:
+    name: fibonacciApp
+  jpa:
+    database: postgresql
+    hibernate:
+      format_sql: true
+      ddl-auto: update
+      cache:
+        use_second_level_cache: false
